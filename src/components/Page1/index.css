@@ -26,6 +26,10 @@
     cursor: pointer;
 }
 
+#Page1 #filters span:first-of-type {
+    margin-left: 0px;
+}
+
 #Page1 #filters span.active {
     background-color: rgba(237, 106, 50, 0.8);
     font-weight: 500;
@@ -34,6 +38,6 @@
     padding: 4px 12px;
 }
 
-#Page1 #receipeList {
+#Page1 #filteredRecipeList {
     padding-inline: 16px;
 }

@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Page1 from './components/Page1';
 import { store } from './store';
 import { Provider } from 'react-redux';
+import RecipeDetail from './components/RecipeDetail';
 
 const routes = createBrowserRouter([
   {
@@ -15,6 +16,9 @@ const routes = createBrowserRouter([
   }, {
     path: '/page1',
     element: <Page1 />
+  }, {
+    path: '/recipe/:id',
+    element: <RecipeDetail />
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
