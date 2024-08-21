@@ -1,5 +1,8 @@
 # About this project
 Found a minimal app design for viewing receipes on Figma platform and tried to develop it using Reactjs.
+
+### View the website on : https://moondustkj.github.io/receipes/
+
 It consists of three pages:
 1. Homepage
    
