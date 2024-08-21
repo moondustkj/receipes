@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <img src='./assets/title.png' alt='title' height={85}
+      <img src='/receipes/assets/title.png' alt='title' height={85}
         className='block m-auto title' />
       <div className='footer'>
         <h4>Lets cook good food</h4>

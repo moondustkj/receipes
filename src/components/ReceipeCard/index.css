@@ -11,7 +11,8 @@
 .card {
     margin-bottom: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
-    border-radius: 8px;    
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .card h4 {
@@ -32,22 +33,4 @@
     gap: 8px;
     align-items: center;
     margin-top: 8px;
-}
-
-.card .bookmark {
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    right: 12px;
-    top: 8px;
-    border-radius: 6px;
-
-}
-
-.card .bookmark svg.filled {
-    fill: #F0875A;
 }

@@ -52,8 +52,197 @@
   cursor: pointer;
 }
 
+.ui-bookmark {
+  --icon-size: 20px;
+  --icon-secondary-color: rgb(77, 77, 77);
+  --icon-hover-color: rgb(97, 97, 97);
+  --icon-primary-color: #F0875A;
+  --icon-circle-border: 1px solid var(--icon-primary-color);
+  --icon-circle-size: 35px;
+  --icon-anmt-duration: 0.3s;
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  background: #FFFFFFCC;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ui-bookmark input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: var(--icon-size);
+  border-right: 8px solid var(--icon-secondary-color);
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  right: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+.ui-bookmark input::before {
+  content: "";
+  height: var(--icon-size);
+  border-left: 8px solid var(--icon-secondary-color);
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  left: -5px;
+  border-radius: 3px;
+}
+
+.ui-bookmark input:checked {
+  border-right-color: var(--icon-primary-color);
+  transition: 0.1s 0.3s border;
+  animation: scaleBookmark 0.4s;
+}
+
+.ui-bookmark input:checked::before {
+  border-left-color: var(--icon-primary-color);
+  transition: 0.1s 0.3s border;
+}
+
+@keyframes scaleBookmark {
+  60% {
+      transform: scale(0.6);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+.bookmark {
+  width: var(--icon-size);
+  height: auto;
+  fill: var(--icon-secondary-color);
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+
+.bookmark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+  box-shadow: 0 30px 0 -4px var(--icon-primary-color),
+      30px 0 0 -4px var(--icon-primary-color),
+      0 -30px 0 -4px var(--icon-primary-color),
+      -30px 0 0 -4px var(--icon-primary-color),
+      -22px 22px 0 -4px var(--icon-primary-color),
+      -22px -22px 0 -4px var(--icon-primary-color),
+      22px -22px 0 -4px var(--icon-primary-color),
+      22px 22px 0 -4px var(--icon-primary-color);
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.bookmark::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: var(--icon-circle-border);
+  opacity: 0;
+}
+
+@keyframes circle {
+  from {
+      width: 0;
+      height: 0;
+      opacity: 0;
+  }
+
+  90% {
+      width: var(--icon-circle-size);
+      height: var(--icon-circle-size);
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes circles {
+  from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+
+  40% {
+      opacity: 1;
+  }
+
+  to {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0;
+  }
+}
+
+.ui-bookmark input:checked+.bookmark::after {
+  -webkit-animation: circles var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: circles var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: var(--icon-anmt-duration);
+  animation-delay: var(--icon-anmt-duration);
+}
+
+.ui-bookmark input:checked+.bookmark {
+  fill: var(--icon-primary-color);
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.ui-bookmark input:checked+.bookmark::before {
+  -webkit-animation: circle var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: circle var(--icon-anmt-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  -webkit-animation-delay: var(--icon-anmt-duration);
+  animation-delay: var(--icon-anmt-duration);
+}
+
 @media screen and (min-width: 1100px) {
   .App {
     text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .footer {
+    width: inherit;
+  }
+  #Page1, #recipe-detail {
+      width: 50%;
+      margin-inline: auto;
   }
 }
