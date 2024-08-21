@@ -2,7 +2,7 @@
   "name": "receipes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://moondustkj.github.io/receipes",
+  "homepage": "https://moondustkj.github.io/receipes/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
