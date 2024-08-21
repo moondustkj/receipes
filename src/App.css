@@ -9,7 +9,8 @@
 .App .title {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, calc(100% - 243px)); /* subtract the height of footer */
+  transform: translate(-50%, calc(100% - 243px));
+  /* subtract the height of footer */
   top: 50%;
 }
 
@@ -44,12 +45,22 @@
   line-height: 52px;
   height: 56px;
   background-color: #2EACAA;
+  background: linear-gradient(to left, #2EACAA 50%, #1d6f6d 50%);
+  background-position: right bottom;
+  background-size: 200% 100%;
+  transition: background 0.5s ease;
   color: #ffffff;
   font-weight: 500;
   border-radius: 50px;
   justify-self: center;
   align-self: flex-end;
   cursor: pointer;
+  position: relative;
+  animation: scale 0.3s;
+}
+
+.footer a:hover {
+  background-position: left bottom;
 }
 
 .ui-bookmark {
@@ -110,11 +121,11 @@
 
 @keyframes scaleBookmark {
   60% {
-      transform: scale(0.6);
+    transform: scale(0.6);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -147,21 +158,21 @@
   width: 10px;
   height: 10px;
   -webkit-box-shadow: 0 30px 0 -4px var(--icon-primary-color),
-      30px 0 0 -4px var(--icon-primary-color),
-      0 -30px 0 -4px var(--icon-primary-color),
-      -30px 0 0 -4px var(--icon-primary-color),
-      -22px 22px 0 -4px var(--icon-primary-color),
-      -22px -22px 0 -4px var(--icon-primary-color),
-      22px -22px 0 -4px var(--icon-primary-color),
-      22px 22px 0 -4px var(--icon-primary-color);
+    30px 0 0 -4px var(--icon-primary-color),
+    0 -30px 0 -4px var(--icon-primary-color),
+    -30px 0 0 -4px var(--icon-primary-color),
+    -22px 22px 0 -4px var(--icon-primary-color),
+    -22px -22px 0 -4px var(--icon-primary-color),
+    22px -22px 0 -4px var(--icon-primary-color),
+    22px 22px 0 -4px var(--icon-primary-color);
   box-shadow: 0 30px 0 -4px var(--icon-primary-color),
-      30px 0 0 -4px var(--icon-primary-color),
-      0 -30px 0 -4px var(--icon-primary-color),
-      -30px 0 0 -4px var(--icon-primary-color),
-      -22px 22px 0 -4px var(--icon-primary-color),
-      -22px -22px 0 -4px var(--icon-primary-color),
-      22px -22px 0 -4px var(--icon-primary-color),
-      22px 22px 0 -4px var(--icon-primary-color);
+    30px 0 0 -4px var(--icon-primary-color),
+    0 -30px 0 -4px var(--icon-primary-color),
+    -30px 0 0 -4px var(--icon-primary-color),
+    -22px 22px 0 -4px var(--icon-primary-color),
+    -22px -22px 0 -4px var(--icon-primary-color),
+    22px -22px 0 -4px var(--icon-primary-color),
+    22px 22px 0 -4px var(--icon-primary-color);
   border-radius: 50%;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -178,36 +189,36 @@
 
 @keyframes circle {
   from {
-      width: 0;
-      height: 0;
-      opacity: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 
   90% {
-      width: var(--icon-circle-size);
-      height: var(--icon-circle-size);
-      opacity: 1;
+    width: var(--icon-circle-size);
+    height: var(--icon-circle-size);
+    opacity: 1;
   }
 
   to {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
 @keyframes circles {
   from {
-      -webkit-transform: scale(0);
-      transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
 
   40% {
-      opacity: 1;
+    opacity: 1;
   }
 
   to {
-      -webkit-transform: scale(0.8);
-      transform: scale(0.8);
-      opacity: 0;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
   }
 }
 
@@ -238,11 +249,14 @@
     width: 50%;
     margin: 0 auto;
   }
+
   .footer {
     width: inherit;
   }
-  #Page1, #recipe-detail {
-      width: 50%;
-      margin-inline: auto;
+
+  #Page1,
+  #recipe-detail {
+    width: 50%;
+    margin-inline: auto;
   }
 }
