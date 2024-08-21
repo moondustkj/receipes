@@ -22,7 +22,7 @@ const filters = [
 const recipesList = [
     {
         id: 1,
-        img: '/assets/img1.png',
+        img: '/receipes/assets/img1.png',
         title: 'Toast with egg and avocado',
         time: 900,
         ingredients: ['1 egg', '1 avocado', '1 toast', 'seasonings to taste', '1 sunflower oil'],
@@ -36,7 +36,7 @@ const recipesList = [
         ]
     },{
         id: 2,
-        img: '/assets/img2.png',
+        img: '/receipes/assets/img2.png',
         title: 'Oatmeal with fruits',
         time: 1500,
         ingredients: ['milk', 'oatmeal', 'fruits'],
@@ -50,7 +50,7 @@ const recipesList = [
         ]
     },{
         id: 3,
-        img: '/assets/img3.png',
+        img: '/receipes/assets/img3.png',
         title: 'Pancakes',
         time: 2700,
         ingredients: ['1 egg', 'All purpose flour', 'Maple syrup'],
@@ -64,7 +64,7 @@ const recipesList = [
         ]
     },{
         id: 4,
-        img: '/assets/img3.png',
+        img: '/receipes/assets/img3.png',
         title: 'Dal Chaawal',
         time: 2700,
         ingredients: ['1 cup Dal', 'Onions', 'Tomatoes'],
@@ -78,7 +78,7 @@ const recipesList = [
         ]
     },{
         id: 5,
-        img: '/assets/img3.png',
+        img: '/receipes/assets/img3.png',
         title: 'Chicken Curry',
         time: 3000,
         ingredients: ['Curry cut Chicken', 'Onions', 'Spices'],

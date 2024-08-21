@@ -36,9 +36,9 @@ const Page1 = () => {
     return (
         <div id='Page1'>
             <header className='flex justify-between items-center'>
-                <img src='assets/account.png' alt='account' />
-                <img src='assets/logo.png' alt='logo' />
-                <img src='assets/Zoom In.png' alt='zoom-in' />
+                <img src='./assets/account.png' alt='account' />
+                <img src='./assets/logo.png' alt='logo' />
+                <img src='./assets/Zoom In.png' alt='zoom-in' />
             </header>
 
             <section id='filters'>

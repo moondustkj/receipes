@@ -20,7 +20,9 @@ const routes = createBrowserRouter([
     path: '/recipe/:id',
     element: <RecipeDetail />
   }
-])
+], {
+  basename: "/receipes"
+})
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

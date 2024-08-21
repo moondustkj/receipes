@@ -1,16 +1,17 @@
+import { Link } from 'react-router-dom/dist';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <img src='assets/title.png' alt='title' height={85}
+      <img src='./assets/title.png' alt='title' height={85}
         className='block m-auto title' />
       <div className='footer'>
         <h4>Lets cook good food</h4>
         <p>Сheck out the app and start cooking delicious meals!</p>
-        <a href='/page1' className='btn'>
+        <Link to="/page1" className='btn'>
           Get Started
-        </a>
+        </Link>
       </div>
     </div>
   );
